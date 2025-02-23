@@ -8,6 +8,7 @@ import Work from './pages/Work';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Background from './components/Background'; // Import the Background component
+import Experience from "./components/Experience"
 
 // Create a component that uses the useLocation hook to conditionally render Footer
 function AppContent() {
@@ -113,10 +114,12 @@ function AppContent() {
         } />
         <Route path="/work" element={<Work />} /> 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/experience" element={<Experience />} />
       </Routes>
 
-      {/* Conditionally render Footer if the pathname is NOT '/work' */}
-      {location.pathname !== '/work' && <Footer />}
+        {/* Conditionally render Footer if the pathname is NOT '/work','./experience' */}
+        {location.pathname !== "/work" && location.pathname !== "/experience" && <Footer />}
+
     </div>
   );
 }

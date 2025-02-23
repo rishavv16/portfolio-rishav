@@ -11,7 +11,7 @@ const TechStack = () => {
     {
       category: "Backend",
       icon: <Server className="w-8 h-8" />,
-      skills: ["Node.js", "Express",  "RestAPI"]
+      skills: ["Node.js", "Express",  "RestAPI","PHP"]
     },
     {
       category: "Database",
